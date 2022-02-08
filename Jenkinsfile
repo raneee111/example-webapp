@@ -12,9 +12,9 @@ pipeline {
                 script {
                     GIT_COMMIT_HASH = sh (script: "git log -n 1 --pretty=format:'%H'", returnStdout: true)
                     ACCOUNT_REGISTRY_PREFIX = "localhost:5000"
-                    sh """
-                    \$(aws ecr get-login --no-include-email --region us-east-1)
-                    """
+                  //  sh """
+                  //  \$(aws ecr get-login --no-include-email --region us-east-1)
+                 //   """
                 }
             }
         }
